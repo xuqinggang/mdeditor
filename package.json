@@ -1,7 +1,7 @@
 {
   "name": "editor-md",
   "displayName": "markdown-editor embed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个简洁、易于集成、方便扩展、期望舒服的编写 markdown 的编辑器",
   "main": "./src/client/index.js",
   "repository": {
