@@ -1,6 +1,6 @@
 /*!
- * Mditor embed version 1.3.2
- * Homepage: http://mditor.com
+ * markdown-editor embed version 0.0.1
+ * Homepage: undefined
  */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -127,6 +127,7 @@
 	    this.viewer.$element.scrollTop = viewerScrollTop;
 	  },
 	  /*istanbul ignore next*/onChanged: function onChanged(event) {
+	    console.log('12344');
 	    this.$emit('changed', event);
 	    this.syncScroll();
 	  },
@@ -216,14 +217,17 @@
 	});
 	
 	Mditor.fromTextarea = function (textarea) {
+	  console.log('123');
 	  textarea.classList.add(HIDDEN_CLASS_NAME);
 	  var mditor = new Mditor();
 	  mditor.value = textarea.value;
 	  mditor.$watch('value', function () {
+	    console.log('value');
 	    textarea.value = mditor.value;
 	  });
 	  mditor.$mount(textarea);
 	  mditor.switchTextarea = function () {
+	    console.log('switchTextarea');
 	    if (textarea.classList.contains(HIDDEN_CLASS_NAME)) {
 	      textarea.value = mditor.value;
 	      mditor.$element.classList.add(HIDDEN_CLASS_NAME);
@@ -4717,6 +4721,7 @@
 	    /*istanbul ignore next*/var _this4 = this;
 	
 	    this.$emit('input');
+	    console.log('editor onInput');
 	    if (this._changedTimer) {
 	      clearTimeout(this._changedTimer);
 	      this._changedTimer = null;
@@ -5759,6 +5764,7 @@
 	});
 	
 	Parser.prototype.parse = function (mdText, callback) {
+	  console.log('mdText', mdText);
 	  return marked(mdText, callback);
 	};
 	
