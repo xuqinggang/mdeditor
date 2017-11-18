@@ -1,9 +1,9 @@
 {
-  "name": "mdeditor",
-  "displayName": "Mditor embed",
+  "name": "editor-md",
+  "displayName": "markdown-editor embed",
   "version": "0.0.1",
   "description": "一个简洁、易于集成、方便扩展、期望舒服的编写 markdown 的编辑器",
-  "main": "./lib/client/index.js",
+  "main": "./src/client/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xuqinggang/mdeditor.git"
